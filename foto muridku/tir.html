@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Gabungan HTML dan JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #ubahTeks {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #teks {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="teks">miaw miaw</div>
+    <button id="ubahTeks">Ubah Teks</button>
+
+    <script>
+        const tombol = document.getElementById('ubahTeks');
+        const teks = document.getElementById('teks');
+
+        tombol.addEventListener('click', function() {
+            teks.textContent = 'rawrr rawrr ';
+            tombol.disabled = true;
+            tombol.textContent = 'Teks Telah Diubah';
+        });
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KELAS X TKR 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #640c0c;
+        }
+        h1 {
+            text-align: center;
+            color: #640c0c;
+            margin-bottom: 30px;
+        }
+        h2 {
+            text-align: center;
+            color: #640c0c;
+            margin-bottom: 30px;
+        }
+        .container {
+            max-width: 2000px;
+            margin: auto;
+            padding: 20px;
+            background: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        button {
+            flex: 1;
+            padding: 12px 20px;
+            background-color:#640c0c;
+            color: #ffffff;
+            border: none;
+            border-radius: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color:#640c0c;
+            transform: translateY(-2px);
+        }
+        .card-container {
+            display: none; /* Awalnya disembunyikan */
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card {
+            background: #f0eeee;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(30% - 20px); /* Ukuran kartu */
+            box-sizing: border-box;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #640c0c;
+        }
+        th {
+            background-color: #640c0c;
+            color: rgb(0, 0, 0);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: calc(33% - 10px);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        function toggleCards(cardType) {
+            const cardContainers = ['siswaCards', 'guruCards', 'piketCards', 'strukturCards', 'gallery', 'jadwalPelajaran', 'kegiatanKelas'];
+
+            // Sembunyikan semua kartu
+            cardContainers.forEach(id => {
+                const container = document.getElementById(id);
+                if (container) {
+                    container.style.display = id === cardType ? "flex" : "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    
+    </div>
+
+    <div class="container">
+        <h2>SMKN TAMBAKBOYO</h2>
+        <h1>WELCOME TO WEBSITE CLASS</h1>
+        <h1>X TKR 3</h1>
+
+        <div class="button-container">
+            <button onclick="toggleCards('siswaCards')">Data Siswa</button>
+            <button onclick="toggleCards('guruCards')">Data Guru</button>
+            <button onclick="toggleCards('piketCards')">Piket Kelas</button>
+            <button onclick="toggleCards('strukturCards')">Struktur Kelas</button>
+            <button onclick="toggleCards('gallery')">Galeri Foto</button>
+            <button onclick="toggleCards('jadwalPelajaran')">Jadwal Pelajaran</button>
+            <button onclick="toggleCards('kegiatanKelas')">Kegiatan Kelas</button>
+        </div>
+
+        <div id="siswaCards" class="card-container">
+            <div class="card">
+                <img src="naiman - Copy.jpg" alt="Foto NAIMAN MUHAMMAD DIAN ">
+                <h3>NAIMAN MUHAMMAD DIAN</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:1</p>
+                <p>NISN : 0095748067</p>
+                <p>TTL : Tuban,2009-04-08</p>
+                <p>alamat : dususn pasatan</p>
+                <p>RT : 1</p>
+                <P>RW : 3</P>
+                <P>DUSUN : pasatan</P>
+                <p>KELURAHAN : cokrowati</p>
+                <P>KECAMATAN : kec.tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="nanda - Copy.jpg" alt="Foto NANDA BAKTIAR PRATAMA">
+                <h3>NANDA BAKTIAR PRATAMA</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:2</p>
+                <p>NISN : 0096821665</p>
+                <p>TTL : Tuban,2009-10-08</p>
+                <p>alamat : Sotang</p>
+                <p>RT : 1</p>
+                <P>RW : 2</P>
+                <P>DUSUN : ndukoh</P>
+                <p>KELURAHAN : sotang</p>
+                <P>KECAMATAN : kec.tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="1 - Copy.jpg" alt="Foto Adtya Pratama Putra Wahyudianto">
+                <h3>NAUFAL LABIB HIDAYATULLAH</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:3</p>
+                <p>NISN : 0092833259</p>
+                <p>TTL : Tuban,2009-09-30</p>
+                <p>alamat :tirtonadi</p>
+                <p>RT : 4</p>
+                <P>RW : 1</P>
+                <P>DUSUN : -</P>
+                <p>KELURAHAN : tamaji</p>
+                <P>KECAMATAN : kec.jenu</P>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Afdhal Ulum">
+                <h3>RAFA ALFIANSYAH</h3>
+                <p>Kelas: 10 TKR 23/p>
+                <p>No.Absen:4</p>
+                <p>NISN : 0083100153</p>
+                <p>TTL : Tuban,2008-08-06</p>
+                <p>alamat : jln ds,dikir</p>
+                <p>RT : -</p>
+                <P>RW : -</P>
+                <P>DUSUN : -</P>
+                <p>KELURAHAN : dikir</p>
+                <P>KECAMATAN : kec.tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Ahmad Arif Muzaki">
+                <h3>RAJA HANDIKA</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:5</p>
+                <p>NISN : 0095684572</p>
+                <p>TTL : Tuban,2009-09-10</p>
+                <p>alamat : jenggolo</p>
+                <p>RT : 12</p>
+                <P>RW : 2</P>
+                <P>DUSUN : -</P>
+                <p>KELURAHAN : jenggolo</p>
+                <P>KECAMATAN : kec.jenu</P>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Ahmad Fadli Nur Ibad">
+                <h3>RAMSHA MARIO GALIH SETIAWAN</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:6</p>
+                <p>NISN : 3092131522</p>
+                <p>TTL : Tuban,2009-03-06</p>
+                <p>alamat : socorejo</p>
+                <p>RT : 4</p>
+                <P>RW : 3</P>
+                <P>DUSUN : soco</P>
+                <p>KELURAHAN : desa/kel.socorejo</p>
+                <P>KECAMATAN : kec.jenu</P>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Ahmad Risky Putra Indrawan">
+                <h3>RAYHAN AFFANDINO RAMANDHANA</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:7</p>
+                <p>NISN : 0081132245</p>
+                <p>TTL : Malang,2008-09-05</p>
+                <p>alamat : ds.margosuko</p>
+                <p>RT : 11</p>
+                <P>RW : 3</P>
+                <P>DUSUN : kandang</P>
+                <p>KELURAHAN : desa/kel.margosuko</p>
+                <P>KECAMATAN :kec. bancar</P>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Ahmad Zaenal Prayogi">
+                <h3>REVAN ARDITA PRADANA</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:8</p>
+                <p>NISN : 0098461094</p>
+                <p>TTL : Tuban,2009-01-21</p>
+                <p>alamat : jln ds.cokrowati</p>
+                <p>RT : -</p>
+                <P>RW : -</P>
+                <P>DUSUN : -</P>
+                <p>KELURAHAN : cokrowati</p>
+                <P>KECAMATAN : kec.tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Ahmad Zaeni">
+                <h3>RIZKY DHENDRA ADITYA</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:9</p>
+                <p>NISN : 0086845372</p>
+                <p>TTL : Tuban,2008-10-12</p>
+                <p>alamat : jln dsn,tajeman</p>
+                <p>RT : 7</p>
+                <P>RW : 2</P>
+                <P>DUSUN : tajeman</P>
+                <p>KELURAHAN : ngampelrejo</p>
+                <P>KECAMATAN : kec.bancar</P>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Aldi Rahmaka">
+                <h3>ROHISH SABIQ MUGHNI</h3>
+                <p>Kelas: 1O TKR 3</p>
+                <p>No.Absen:10</p>
+                <p>NISN : 3094626812</p>
+                <p>TTL : Tuban,2009-02-20</p>
+                <p>alamat : socorejo</p>
+                <p>RT : 3</p>
+                <P>RW : 1</P>
+                <P>DUSUN : karangdowo</P>
+                <p>KELURAHAN : desa/kel.socorejo</p>
+                <P>KECAMATAN : kec.jenu</P>
+            </div>
+            <div class="card">
+                <img src="saiful.jpg" alt="Foto Aldi Rizki Utomo">
+                <h3>SAIFUL HIDAYAT</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:11</p>
+                <p>NISN : 0096385509</p>
+                <p>TTL : Tuban,2009-05-02</p>
+                <p>alamat : joho-kayen</p>
+                <p>RT : 10</p>
+                <P>RW : 2</P>
+                <P>DUSUN : joho</P>
+                <p>KELURAHAN : kayen</p>
+                <P>KECAMATAN : kec.bancar</P>
+            </div>
+            <div class="card">
+                <img src="sandy.jpg" alt="Foto Alfin Maulana">
+                <h3>SANDY ALFIAN MALKIANO</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:12</p>
+                <p>NISN : 0089022201</p>
+                <p>TTL : Tuban,2008-04-29</p>
+                <p>alamat : tashikharjo</p>
+                <p>RT : 2</p>
+                <P>RW : 4</P>
+                <P>DUSUN : dermo</P>
+                <p>KELURAHAN : desa/kel.margosuko</p>
+                <P>KECAMATAN : jenu</P>
+            </div>
+            <div class="card">
+                <img src="satria.jpg" alt="Foto Andik Saputro">
+                <h3>SATRIA ABDIL FAATHIR</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:13</p>
+                <p>NISN : 0091439519</p>
+                <p>TTL : Tuban,2009-01-06</p>
+                <p>alamat : karangasem</p>
+                <p>RT : 1</p>
+                <P>RW : 3</P>
+                <P>DUSUN : karangasem</P>
+                <p>KELURAHAN : karangasem</p>
+                <P>KECAMATAN : jenu</P>
+            </div>
+            <div class="card">
+                <img src="desta.jpg" alt="Foto Andika Adi Pratama">
+                <h3>SATRIA DESTA NUGRAHA</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:14</p>
+                <p>NISN : 0082984033</p>
+                <p>TTL : Tuban,2008-12-10</p>
+                <p>alamat : ds margosuko</p>
+                <p>RT : 6</p>
+                <P>RW : 2</P>
+                <P>DUSUN : jegong</P>
+                <p>KELURAHAN : margosuko</p>
+                <P>KECAMATAN : bancar</P>
+            </div>
+            <div class="card">
+                <img src="madha.jpg" alt="Foto Andika Ardi Anto">
+                <h3>SATRYA MADHA FIKYA ALFARISYI</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:15</p>
+                <p>NISN : 0084695232</p>
+                <p>TTL : Tuban,2008-12-07</p>
+                <p>alamat : dikir</p>
+                <p>RT : 6</p>
+                <P>RW : 3</P>
+                <P>DUSUN : -</P>
+                <p>KELURAHAN : dikir</p>
+                <P>KECAMATAN : tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="prasetyo.jpg" alt="Foto Ardian Dwi Nugroho">
+                <h3>SHANDY PRASTYO</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:16</p>
+                <p>NISN : 3086952039</p>
+                <p>TTL : Tuban,2008-05-21</p>
+                <p>alamat : ds.belikanget</p>
+                <p>RT : 9</p>
+                <P>RW : 5</P>
+                <P>DUSUN : -</P>
+                <p>KELURAHAN : belikanget</p>
+                <P>KECAMATAN : tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="" alt="Foto Azzam Maulana">
+                <h3>SHOLEHKHUDDIN AL KAMIL</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:17</p>
+                <p>NISN : 0098466321</p>
+                <p>TTL : Tuban,2009-03-28</p>
+                <p>alamat : ds.klutuk</p>
+                <p>RT : -</p>
+                <P>RW : -</P>
+                <P>DUSUN : -</P>
+                <p>KELURAHAN : klutuk</p>
+                <P>KECAMATAN : tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="" alt="Foto Bagus Candra">
+                <h3>SONY DRAJAT SONJAYA</h3>
+                <p>Kelas: 10 TKR 3/p>
+                <p>No.Absen:18</p>
+                <p>NISN : 0086304443</p>
+                <p>TTL : Tuban,2008-07-18</p>
+                <p>alamat : tambakboyo</p>
+                <p>RT : 1</p>
+                <P>RW : 1</P>
+                <P>DUSUN : tambakboyo</P>
+                <p>KELURAHAN : tambakboyo</p>
+                <P>KECAMATAN : tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Bayu Aditya">
+                <h3>SUL ABU</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:19</p>
+                <p>NISN : 0092610140</p>
+                <p>TTL : Tuban,2009-0-25</p>
+                <p>alamat : dusun pasatan</p>
+                <p>RT : 3</p>
+                <P>RW : 3</P>
+                <P>DUSUN : pasatan</P>
+                <p>KELURAHAN : cokrowati</p>
+                <P>KECAMATAN : tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="surya.jpg" alt="Foto Bima Dwi Putra">
+                <h3>SURYA ALIF HAPIPI</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:20</p>
+                <p>NISN : 0087194329</p>
+                <p>TTL : Tuban,2008-07-11</p>
+                <p>alamat :jl.sumur waru</p>
+                <p>RT : 0</p>
+                <P>RW : 0</P>
+                <P>DUSUN : sumur waru</P>
+                <p>KELURAHAN : remen</p>
+                <P>KECAMATAN :jenu</P>
+            </div>
+            <div class="card">
+                <img src="syahrul.jpg" alt="Foto Dela Dwi Sari">
+                <h3>SYAHRUL AMIRUDIN</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:21</p>
+                <p>NISN : 3082218878</p>
+                <p>TTL : Tuban,2008-01-12</p>
+                <p>alamat :desa cokrowati</p>
+                <p>RT : 5</p>
+                <P>RW : 3</P>
+                <P>DUSUN : pasatan</P>
+                <p>KELURAHAN : cokrowati</p>
+                <P>KECAMATAN : tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="syifa.jpg" alt="Foto Dimas Rian">
+                <h3>SYIFA NAUFAL FIKRI</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:22</p>
+                <p>NISN : 0087496598</p>
+                <p>TTL : Tuban,2008-03-31</p>
+                <p>alamat : desa sawir</p>
+                <p>RT : 2</p>
+                <P>RW : 4</P>
+                <P>DUSUN : sumber waru</P>
+                <p>KELURAHAN : sawir</p>
+                <P>KECAMATAN : tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="tegar.jpg" alt="Foto Eko Prasetyo">
+                <h3>TEGAR FAZRIEL AKBAR FATONI</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:23</p>
+                <p>NISN : 0094296100</p>
+                <p>TTL : Tuban,2009-02-27</p>
+                <p>alamat :jl socorejo</p>
+                <p>RT : 2</p>
+                <P>RW : 1</P>
+                <P>DUSUN : socorejo</P>
+                <p>KELURAHAN : socorejo</p>
+                <P>KECAMATAN : jenu</P>
+            </div>
+            <div class="card">
+                <img src="tirta.jpg" alt="Foto Eko Rahman">
+                <h3>TIRTA EGY PRATAMA</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:24</p>
+                <p>NISN : 0105132386</p>
+                <p>TTL : Tuban,2010-03-21</p>
+                <p>alamat : socorejo</p>
+                <p>RT : 2</p>
+                <P>RW : 2</P>
+                <P>DUSUN : socorejo</P>
+                <p>KELURAHAN : socorejo</p>
+                <P>KECAMATAN : jenu</P>
+            </div>
+            <div class="card">
+                <img src="tomy.jpg" alt="Foto Evan Reza">
+                <h3>TOMY DIMAS AFANDI</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:25</p>
+                <p>NISN : 0088036236</p>
+                <p>TTL : Tuban,2008-10-19</p>
+                <p>alamat : sotang</p>
+                <p>RT : 3</p>
+                <P>RW : 1</P>
+                <P>DUSUN : sotang</P>
+                <p>KELURAHAN : sotang</p>
+                <P>KECAMATAN : tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="tyo.jpg" alt="Foto Fandi">
+                <h3>TYO ARI SANDI</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:26</p>
+                <p>NISN : 0082214059</p>
+                <p>TTL : Tuban,2008-05-07</p>
+                <p>alamat : jenu</p>
+                <p>RT : -</p>
+                <P>RW : -</P>
+                <P>DUSUN : -</P>
+                <p>KELURAHAN : tamaji</p>
+                <P>KECAMATAN : jenu</P>
+            </div>
+            <div class="card">
+                <img src="walam.jpg" alt="Foto Farhan">
+                <h3>WA ALAM ABDUL MUIES</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:27</p>
+                <p>NISN : 3095115160</p>
+                <p>TTL : Tuban,2009-01-21</p>
+                <p>alamat : socorejo</p>
+                <p>RT : 4</p>
+                <P>RW : 3</P>
+                <P>DUSUN : soco</P>
+                <p>KELURAHAN : socorejo</p>
+                <P>KECAMATAN : jenu</P>
+            </div>
+            <div class="card">
+                <img src="prasetyo.jpg" alt="Foto Fathur">
+                <h3>WAHYU PRASETYO</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:28</p>
+                <p>NISN : 0086487895</p>
+                <p>TTL : Tuban,2008-07-29</p>
+                <p>alamat : terangrejo</p>
+                <p>RT : 5</p>
+                <P>RW : 1</P>
+                <P>DUSUN : terangrejo</P>
+                <p>KELURAHAN : temaji</p>
+                <P>KECAMATAN : jenu</P>
+            </div>
+            <div class="card">
+                <img src="pratama.jpg" alt="Foto Geri">
+                <h3>WAHYU PRATAMA</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:29</p>
+                <p>NISN : 0071679046</p>
+                <p>TTL : Tuban,2007-05-11</p>
+                <p>alamat :mander</p>
+                <p>RT : 1</p>
+                <P>RW : 1</P>
+                <P>DUSUN : mander</P>
+                <p>KELURAHAN : mander</p>
+                <P>KECAMATAN : tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="widi.jpg" alt="Foto Gilang">
+                <h3>WIDI FIRMAN PRAKOSO</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:30</p>
+                <p>NISN : 0093373947</p>
+                <p>TTL : Tuban,2009-05-18</p>
+                <p>alamat :mander</p>
+                <p>RT : 1</p>
+                <P>RW : 6</P>
+                <P>DUSUN : mander</P>
+                <p>KELURAHAN : mander</p>
+                <P>KECAMATAN :tambakboyo </P>
+            </div>
+            <div class="card">
+                <img src="wiliam.jpg" alt="Foto Gilang">
+                <h3>WILIAN RANGGA SYAPUTRA</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:31</p>
+                <p>NISN : 0089406845</p>
+                <p>TTL : Tuban,2008-06-01</p>
+                <p>alamat : kandang</p>
+                <p>RT : 12</p>
+                <P>RW : 4</P>
+                <P>DUSUN : kandang</P>
+                <p>KELURAHAN : margosuko</p>
+                <P>KECAMATAN : bancar</P>
+            </div>
+            <div class="card">
+                <img src="" alt="Foto Gilang">
+                <h3>YOGY FARCHAN DRIYA</h3>
+                <p>Kelas: 10 TKR 3</p>
+                <p>No.Absen:32</p>
+                <p>NISN : 0098643263</p>
+                <p>TTL : Tuban,2009-04-19</p>
+                <p>alamat : cokrowati</p>
+                <p>RT : -</p>
+                <P>RW : -</P>
+                <P>DUSUN : -</P>
+                <p>KELURAHAN : cokrowati</p>
+                <P>KECAMATAN : jenu</P>
+          </div>
+          <div class="card">
+            <img src="arif.jpg" alt="Foto Gilang">
+            <h3>ZAENAL ARIF</h3>
+            <p>Kelas: 10 TKR 3</p>
+            <p>No.Absen:33</p>
+            <p>NISN : 0075035440</p>
+                <p>TTL : Tuban,2007-10-18</p>
+                <p>alamat : sumur waru</p>
+                <p>RT : 3</p>
+                <P>RW : 7</P>
+                <P>DUSUN : sumur waru</P>
+                <p>KELURAHAN : remen</p>
+                <P>KECAMATAN : jenu</P>
+          </div>
+          <div class="card">
+            <img src="abidin.jpg" alt="Foto Gilang">
+            <h3>ZAINAL ABIDIN</h3>
+            <p>Kelas: 10 TKR 3</p>
+            <p>No.Absen:34</p>
+            <p>NISN : 0091312010</p>
+                <p>TTL : Tuban,2009-02-26</p>
+                <p>alamat : karangrejo</p>
+                <p>RT : 11</p>
+                <P>RW : 3</P>
+                <P>DUSUN : deresan</P>
+                <p>KELURAHAN : karangrejo</p>
+                <P>KECAMATAN : bancar</P>
+          </div>
+  </div>
+
+        <div id="guruCards" class="card-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Ahmad Zainuri">
+                <h3>AHMAD MUDHOR,S.PD</h3>
+                <p>Ttl : tuban,1998-03-06</p>
+                <p>Jabatan: Guru Produktif Pilihan TKR</p>
+            </div>
+            <div class="card">
+                <img src="9 - Copy.jpeg" alt="Foto Ainun Nisa">
+                <h3>ARI HIDAYAT,S.PD</h3>
+                <p>Ttl : blitar,1986-04-27</p>
+                <p>Jabatan: Guru Produktif Pilihan TKR</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>JUANGGA NANDA PUTRI SUSRIVANNI,S.PD</h3>
+                <p>Ttl : tuban,1991-01-15</p>
+                <p>Jabatan: Guru SENI</p>
+            </div>
+            <div class="card">
+                <img src="farid - Copy.jpeg" alt="Foto Nuranisah">
+                <h3>FARID NURUL HUDA,S.PD</h3>
+                <p>Ttl : tuban,1986-05-04</p>
+                <p>Jabatan: Guru BK</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>NURUL HAMDIYAH ARIF,S.S,GR</h3>
+                <p>Ttl : gresik,1983-06-12</p>
+                <p>Jabatan: Guru B.INDONESIA</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>RASMU,S.PD</h3>
+                <p>Ttl : tuban,1987-09-21</p>
+                <p>Jabatan: Guru PAI</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>ADE SUPRIYANDI,S.PD</h3>
+                <p>Ttl : temanggung,1984-04-21</p>
+                <p>Jabatan: Guru IPAS</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>ABDUL MUKHTI,S.H,GR</h3>
+                <p>Ttl : rembang,1974-01-15</p>
+                <p>Jabatan: Guru PPKN</p>
+            </div>
+            <div class="card">
+                <img src="herlina - Copy.jpeg" alt="Foto Nuranisah">
+                <h3>HERLINA WATI,S.PD</h3>
+                <p>Ttl : tuban,1984-03-06</p>
+                <p>Jabatan: Guru B.INGGRIS</p>
+            </div>
+            <div class="card">
+                <img src="ariesta - Copy.jpeg" alt="Foto Nuranisah">
+                <h3>ARIESTA IKA SOFIANA,S.PD</h3>
+                <p>Ttl :tuban,1987-04-09</p>
+                <p>Jabatan: Guru MATEMATIKA</p>
+            </div>
+            <div class="card">
+                <img src="agus - Copy.jpeg" alt="Foto Nuranisah">
+                <h3>AGUS SETIYONO,S.PD.GR</h3>
+                <p>Ttl :tuban,1987-08-19</p>
+                <p>Jabatan: Guru PJOK</p>
+            </div>
+            <div class="card">
+                <img src="suwarno - Copy.jpeg" alt="Foto Nuranisah">
+                <h3>SUARNO,S.KOM.GR</h3>
+                <p>Ttl :tuban,1979-02-15</p>
+                <p>Jabatan: Guru INFORMATIKA</p>
+            </div>
+            <div class="card">
+                <img src="siti - Copy.jpeg" alt="Foto Nuranisah">
+                <h3>SITI WAHYUNINGSIH,S.PD</h3>
+                <p>Ttl :tuban,1995-05-04</p>
+                <p>Jabatan: Guru SEJARAH</p>
+            </div>
+            <div class="card">
+                <img src="pratika - Copy.jpeg" alt="Foto Nuranisah">
+                <h3>PRATIKA AGUSTINA W,S.PD</h3>
+                <p>Ttl :tulungagung,1993-08-14</p>
+                <p>Jabatan: Guru SB.JAWA</p>
+            </div>
+        </div>
+
+        <div id="piketCards" class="card-container">
+            <div class="card">
+                <h3>Senin</h3>
+                <p> NANDA BAKTIAR</p>
+                <p> NAUFAL LABIB</p>
+                <p> RAFA ALFIANSYAH</p>
+                <p>RAJA HANDIKA</p>
+                <p>ZAENAL ABIDIN</p>
+                <p>TOMY DIMAS AFANDI</p>
+            </div>
+            <div class="card">
+                <h3>Selasa</h3>
+                <p>RAMSHA MARIO</p>
+                <p>REVAN ARDITA</p>
+                <p>RIZKY DENDRA</p>
+                <p>ROHISH SABIQ</p>
+                <p>WAHYU PRASETYO</p>
+            </div>
+            <div class="card">
+                <h3>Rabu</h3>
+                <p>SAIFUL HIDAYAT</p>
+                <p>SANDY ALFIAN</p>
+                <p>SATRIA ABDIL FATHIR</p>
+                <p>SATRYA MADHA FIKYA</p>
+                <p>YOGI FARCHAN DRIYA</p>
+                <p>WAHYU PRATAMA</p>
+            </div>
+            <div class="card">
+                <h3>Kamis</h3>
+                <p>SHANDY PRASETYO</p>
+                <p>SHOLEKHUDIN AL SENJAYA</p>
+                <p>SUL ABU</p>
+                <p>WIDI FIRMAN PRAKOSO</p>
+                <p>WILIAN RANGGA SAPUTRA</p>
+           </div>
+           <div class="card">
+                <h3>Jumat</h3>
+                <p>SYAHRUL AMIRUDIN</p>
+                <p>SYIFA NAUFAL FIKRI</p>
+                <p>TEGAR FAZRIEL AKBAR</p>
+                <p>TIRTO EGY PRATAMA</p>
+                <p>ZAENAL ARIF</p>
+           </div>
+        </div>
+
+        <div id="strukturCards" class="card-container">
+            <div class="card">
+                <img src="agus-siswanto - Copy.png" alt="Foto Nuranisah">
+                <h3>AGUS SISWANTO, S.Pd., M.Pd.</h3>
+                <p>Jabatan : Kepala Sekolah</p>
+                <p>Alamat : Kel. Gedungombo Kec. Semanding - Tuban</p>
+            </div>
+                <div class="card">
+                <img src="file - Copy.enc" alt="Foto Nuranisah">
+                <h3>muhimatul ifadah,s.pd</h3>
+                <p>jabatan : wali kelas</p>
+                <p>Alamat: Desa Kayen Kec. Bancar</p>
+            </div>
+                <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>ketua kelas</h3>
+                <p>wa alam abdul muif</p>
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>Wali kelas</h3>
+                <p>muhimatul ifadah,s.pd</p>
+            </div>
+                <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>sekertaris 1</h3>
+                <p>reyhan affandi</p>
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>sekertaris 2</h3>
+                <p>satria desta nugraha</p>
+            </div>
+                <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>bendahara 1</h3>
+                <p>naiman muhammad</p>
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>bendahara 2</h3>
+                <p>tgo ari sandi</p>
+            </div>
+        </div>
+
+        <div id="gallery" class="gallery">
+            <img src="https://via.placeholder.com/300" alt="Foto Kegiatan 1">
+            <img src="https://via.placeholder.com/300" alt="Foto Kegiatan 2">
+            <img src="https://via.placeholder.com/300" alt="Foto Kegiatan 3">
+        </div>
+
+        <div id="jadwalPelajaran" class="card-container">
+            <table>
+                <tr>
+                    <th>SENIN</th>
+                    <th>SELASA</th>
+                    <th>RABU</th>
+                    <th>KAMIS</th>
+                    <th>JUM'AT</th>
+                </tr>
+                <tr>
+                    <td>seni</td>
+                    <td>bk</td>
+                    <td>b.indo</td>
+                    <td>pai</td>
+                    <td>ipas</td>
+                </tr>
+                <tr>
+                    <td>pkn</td>
+                    <td>ipas</td>
+                    <td>b.inggris</td>
+                    <td>mtk</td>
+                    <td>b.indo</td>
+                    
+                </tr>
+                <tr>
+                    <td>b.inggris</td>
+                    <td>pjok</td>
+                    <td>informatika</td>
+                    <td>mtk</td>
+                    <td>produktif</td>
+                </tr>
+                <tr>
+                    <td>sejarah</td>
+                    <td>informatika</td>
+                    <td>b.jawa</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="kegiatanKelas" class="card-container">
+            <h3>Kegiatan Kelas</h3>
+            <p>- melakukan jumat religius sesuai jadwal </p>
+        </div>
+    </div>
+</body>
+</html>
